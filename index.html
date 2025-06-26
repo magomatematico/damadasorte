@@ -82,7 +82,7 @@
             align-items: center;
             gap: 0.5rem;
             width: 100%;
-            max-width: 300px;
+            max-width: 350px; /* Increased for larger buttons */
             justify-content: center;
             text-align: center;
         }
@@ -92,7 +92,7 @@
         .dropdown {
             position: relative;
             width: 100%;
-            max-width: 300px;
+            max-width: 350px;
         }
         .dropdown-content {
             display: none;
@@ -139,7 +139,7 @@
         /* Media Queries for responsiveness */
         @media (max-width: 768px) {
             .buttons button, .dropdown {
-                max-width: 80%;
+                max-width: 90%;
             }
             .dropdown-content {
                 width: 100%;
@@ -164,7 +164,7 @@
             .buttons button, .dropdown button {
                 padding: 0.8rem 1.5rem;
                 font-size: clamp(0.9rem, 3vw, 1rem);
-                max-width: 90%;
+                max-width: 95%;
             }
             .logo img {
                 max-width: min(150px, 60vw);
