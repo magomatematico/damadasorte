@@ -49,9 +49,16 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .buttons button:hover {
             background-color: #2980b9;
+        }
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
         }
         footer {
             text-align: center;
@@ -72,10 +79,13 @@
         <img src="logo.png" alt="Logo Dama da Sorte">
     </div>
     <div class="buttons">
-        <button onclick="alert('Função de Apostas Online ativada!')">Apostas Online</button>
-        <button onclick="alert('Função de Cassino ativada!')">Cassino</button>
-        <button onclick="alert('Função de Loterias ativada!')">Loterias</button>
-        <button onclick="alert('Função de Jogo do Bicho ativada!')">Jogo do Bicho</button>
+        <button onclick="window.location.href='https://www.zoogames.com.br/'">Apostas Online</button>
+        <button onclick="window.location.href='https://app.aguiaoficial.com/pr/sAeBgEfV'">Cassino</button>
+        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Quero%20me%20tornar%20um%20promotor'">Torne-se um Promotor</button>
+        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Preciso%20de%20suporte'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+            Suporte
+        </button>
     </div>
     <footer>
         <p>© 2025 Dama da Sorte. Todos os direitos reservados.</p>
