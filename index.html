@@ -62,16 +62,16 @@
         }
         .buttons {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 1rem;
             padding: 1.5rem;
             width: 100%;
             background-color: #f4f4f4;
-            flex-wrap: wrap;
         }
         .buttons button, .dropdown button {
-            padding: 0.8rem 1.5rem;
-            font-size: clamp(0.9rem, 3vw, 1rem);
+            padding: 1rem 2rem;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
             background-color: #3498db;
             color: white;
             border: none;
@@ -81,8 +81,8 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            flex: 1 1 180px;
-            max-width: 180px;
+            width: 100%;
+            max-width: 300px;
             justify-content: center;
             text-align: center;
         }
@@ -91,8 +91,8 @@
         }
         .dropdown {
             position: relative;
-            flex: 1 1 180px;
-            max-width: 180px;
+            width: 100%;
+            max-width: 300px;
         }
         .dropdown-content {
             display: none;
@@ -111,7 +111,7 @@
             padding: 0.8rem 1rem;
             text-decoration: none;
             display: block;
-            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            font-size: clamp(0.9rem, 3vw, 1rem);
             text-align: center;
         }
         .dropdown-content a:hover {
@@ -123,8 +123,8 @@
             display: block;
         }
         .whatsapp-icon {
-            width: clamp(16px, 4vw, 20px);
-            height: clamp(16px, 4vw, 20px);
+            width: clamp(18px, 4vw, 22px);
+            height: clamp(18px, 4vw, 22px);
         }
         footer {
             text-align: center;
@@ -138,12 +138,7 @@
         }
         /* Media Queries for additional responsiveness */
         @media (max-width: 768px) {
-            .buttons {
-                flex-direction: column;
-                align-items: center;
-            }
             .buttons button, .dropdown {
-                flex: 1 1 80%;
                 max-width: 80%;
             }
             .dropdown-content {
@@ -167,10 +162,9 @@
                 font-size: clamp(1.5rem, 5vw, 2rem);
             }
             .buttons button, .dropdown button {
-                padding: 0.6rem 1rem;
-                font-size: clamp(0.8rem, 2.5vw, 0.9rem);
-                flex: 1 1 100%;
-                max-width: 100%;
+                padding: 0.8rem 1.5rem;
+                font-size: clamp(0.9rem, 3vw, 1rem);
+                max-width: 90%;
             }
             .logo img {
                 max-width: min(150px, 60vw);
@@ -207,7 +201,7 @@
         <button onclick="window.location.href='https://app.aguiaoficial.com/pr/sAeBgEfV'">Cassino</button>
         <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Quero%20me%20tornar%20um%20promotor'">Torne-se um Promotor</button>
         <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Preciso%20de%20suporte'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" poignant="Ícone do WhatsApp para suporte" class="whatsapp-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" title="Ícone do WhatsApp para suporte" class="whatsapp-icon">
             Suporte
         </button>
     </div>
