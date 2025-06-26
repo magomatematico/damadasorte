@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dama da Sorte</title>
+    <title>Dama da Sorte - Apostas, Jogo do Bicho e Cassino</title>
+    <meta name="description" content="Dama da Sorte oferece os melhores palpites para apostas online, jogo do bicho e cassino com suporte exclusivo e parcerias confiáveis. Junte-se agora!">
+    <meta name="keywords" content="Dama da Sorte, apostas online, jogo do bicho, cassino, bancas confiáveis, Águia Oficial, Tiger Club, Golden Loterias, Banca Brasileira">
+    <meta name="author" content="Dama da Sorte">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Dama da Sorte - Apostas e Cassino">
+    <meta property="og:description" content="Descubra os melhores palpites para apostas, jogo do bicho e cassino com a Dama da Sorte. Suporte exclusivo e bancas confiáveis!">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://www.damadasorte.com">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         * {
             box-sizing: border-box;
@@ -38,27 +50,28 @@
         .logo img {
             max-width: min(200px, 50vw);
             height: auto;
+            margin-bottom: 2rem;
         }
         .description {
-            text-align: center;
+            text-align: justify;
             padding: 0 1.5rem;
             margin-bottom: 2rem;
-            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            font-size: clamp(1rem, 3.2vw, 1.2rem);
             color: #34495e;
             max-width: 800px;
         }
         .buttons {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 1rem;
             padding: 1.5rem;
             width: 100%;
             background-color: #f4f4f4;
-            flex-wrap: wrap;
         }
-        .buttons button {
-            padding: 0.8rem 1.5rem;
-            font-size: clamp(0.9rem, 3vw, 1rem);
+        .buttons button, .dropdown button {
+            padding: 1rem 2rem;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
             background-color: #3498db;
             color: white;
             border: none;
@@ -68,27 +81,24 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            flex: 1;
-            max-width: 180px;
+            width: 100%;
+            max-width: 300px;
             justify-content: center;
             text-align: center;
         }
-        .buttons button:hover {
+        .buttons button:hover, .dropdown button:hover {
             background-color: #2980b9;
-        }
-        .whatsapp-icon {
-            width: clamp(16px, 4vw, 20px);
-            height: clamp(16px, 4vw, 20px);
         }
         .dropdown {
             position: relative;
-            display: inline-block;
+            width: 100%;
+            max-width: 300px;
         }
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f4f4f4;
-            min-width: 180px;
+            width: 100%;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             border-radius: 5px;
@@ -101,7 +111,7 @@
             padding: 0.8rem 1rem;
             text-decoration: none;
             display: block;
-            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            font-size: clamp(0.9rem, 3vw, 1rem);
             text-align: center;
         }
         .dropdown-content a:hover {
@@ -111,6 +121,10 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+        .whatsapp-icon {
+            width: clamp(18px, 4vw, 22px);
+            height: clamp(18px, 4vw, 22px);
         }
         footer {
             text-align: center;
@@ -124,16 +138,11 @@
         }
         /* Media Queries for additional responsiveness */
         @media (max-width: 768px) {
-            .buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            .buttons button {
+            .buttons button, .dropdown {
                 max-width: 80%;
-                width: 100%;
             }
             .dropdown-content {
-                width: 80%;
+                width: 100%;
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -145,25 +154,26 @@
             }
             .description {
                 padding: 0 1rem;
-                font-size: clamp(0.8rem, 2.8vw, 1rem);
+                font-size: clamp(0.9rem, 2.8vw, 1.1rem);
             }
         }
         @media (max-width: 480px) {
             header h1 {
                 font-size: clamp(1.5rem, 5vw, 2rem);
             }
-            .buttons button {
-                padding: 0.6rem 1rem;
-                font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            .buttons button, .dropdown button {
+                padding: 0.8rem 1.5rem;
+                font-size: clamp(0.9rem, 3vw, 1rem);
+                max-width: 90%;
             }
             .logo img {
                 max-width: min(150px, 60vw);
             }
             .description {
-                font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+                font-size: clamp(0.8rem, 2.5vw, 1rem);
             }
             .dropdown-content {
-                min-width: 100%;
+                width: 100%;
             }
         }
     </style>
@@ -173,7 +183,7 @@
         <h1>Dama da Sorte</h1>
     </header>
     <div class="logo">
-        <img src="logo.png" alt="Logo Dama da Sorte">
+        <img src="logo.png" alt="Logo Dama da Sorte - Apostas e Cassino">
         <p class="description">
             Olá, eu sou a Dama da Sorte! Trabalho com os melhores palpites em apostas, jogo do bicho e cassino, sempre com muito profissionalismo e dedicação. Tenho um grupo exclusivo com suporte completo, parceria com as bancas mais confiáveis e uma equipe experiente pronta para ajudar você a alcançar os melhores resultados. Vem fazer parte e conte com a nossa qualidade e atenção em cada jogada!
         </p>
@@ -191,7 +201,7 @@
         <button onclick="window.location.href='https://app.aguiaoficial.com/pr/sAeBgEfV'">Cassino</button>
         <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Quero%20me%20tornar%20um%20promotor'">Torne-se um Promotor</button>
         <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Preciso%20de%20suporte'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" title="Ícone do WhatsApp para suporte" class="whatsapp-icon">
             Suporte
         </button>
     </div>
