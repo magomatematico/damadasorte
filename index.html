@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dama da Sorte - Apostas, Jogo do Bicho e Cassino</title>
     <meta name="description" content="Dama da Sorte oferece os melhores palpites para apostas online, jogo do bicho e cassino com suporte exclusivo e parcerias confiáveis. Junte-se agora!">
-    <meta name="keywords" content="Dama da Sorte, apostas online, jogo do bicho, cassino, bancas confiáveis, Águia Oficial, Tiger Club, Golden Loterias, Banca Brasileira">
+    <meta name="keywords" content="Dama da Sorte, apostas online, jogo do bicho, cassino, bancas confiáveis, Águia Oficial, Tiger Club, Golden Loterias, Banca Brasileira, promotor JB">
     <meta name="author" content="Dama da Sorte">
     <meta name="robots" content="index, follow">
     <!-- Open Graph Tags for Social Media -->
@@ -45,7 +45,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            flex-grow: 1;
+            flex-grow: 0;
         }
         .logo img {
             max-width: min(200px, 50vw);
@@ -82,7 +82,7 @@
             align-items: center;
             gap: 0.5rem;
             width: 100%;
-            max-width: 300px;
+            max-width: 350px;
             justify-content: center;
             text-align: center;
         }
@@ -92,7 +92,7 @@
         .dropdown {
             position: relative;
             width: 100%;
-            max-width: 300px;
+            max-width: 350px;
         }
         .dropdown-content {
             display: none;
@@ -126,6 +126,84 @@
             width: clamp(18px, 4vw, 22px);
             height: clamp(18px, 4vw, 22px);
         }
+        .content {
+            max-width: 800px;
+            width: 100%;
+            padding: 0 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .content-section {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .content-section:not(.visible) {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .content-section h2 {
+            font-size: clamp(1.5rem, 4vw, 1.8rem);
+            color: #3498db;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .content-section p, .content-section li {
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .content-section ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+        .content-section ul li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .content-section ul li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+        .content-section ul li.checkmark-fire::before {
+            content: '🔥';
+        }
+        .content-section ul li.checkmark-rocket::before {
+            content: '🚀';
+        }
+        .content-section .promotor-button {
+            padding: 1rem 2rem;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 350px;
+            justify-content: center;
+            text-align: center;
+            margin: 1rem auto 0;
+        }
+        .content-section .promotor-button:hover {
+            background-color: #2980b9;
+        }
         footer {
             text-align: center;
             padding: 1rem;
@@ -138,8 +216,8 @@
         }
         /* Media Queries for responsiveness */
         @media (max-width: 768px) {
-            .buttons button, .dropdown {
-                max-width: 80%;
+            .buttons button, .dropdown, .content-section .promotor-button {
+                max-width: 90%;
             }
             .dropdown-content {
                 width: 100%;
@@ -156,21 +234,27 @@
                 padding: 0 1rem;
                 font-size: clamp(0.9rem, 2.8vw, 1.1rem);
             }
+            .content {
+                padding: 0 1rem;
+            }
         }
         @media (max-width: 480px) {
             header h1 {
                 font-size: clamp(1.5rem, 5vw, 2rem);
             }
-            .buttons button, .dropdown button {
+            .buttons button, .dropdown, .content-section .promotor-button {
                 padding: 0.8rem 1.5rem;
                 font-size: clamp(0.9rem, 3vw, 1rem);
-                max-width: 90%;
+                max-width: 95%;
             }
             .logo img {
                 max-width: min(150px, 60vw);
             }
             .description {
                 font-size: clamp(0.8rem, 2.5vw, 1rem);
+            }
+            .content-section h2 {
+                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
             }
             .dropdown-content {
                 width: 100%;
@@ -199,14 +283,134 @@
             </div>
         </div>
         <button onclick="window.location.href='https://app.aguiaoficial.com/pr/sAeBgEfV'">Cassino</button>
-        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Quero%20me%20tornar%20um%20promotor'">Torne-se um Promotor</button>
         <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Preciso%20de%20suporte'">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" title="Ícone do WhatsApp para suporte" class="whatsapp-icon">
             Suporte
         </button>
     </div>
+    <div class="content">
+        <div class="content-section">
+            <h2>Seja um Promotor de vendas JB – Ganhos Reais com Liberdade Total</h2>
+            <p><strong>📌 O que é ser um Promotor JB?</strong></p>
+            <p>Ser Promotor JB é uma oportunidade real de renda com total liberdade e potencial de ganhos escaláveis. O trabalho é feito de forma independente, utilizando uma plataforma de apostas online confiável e em crescimento. Como promotor, você será responsável por divulgar seu link exclusivo de afiliado e ganhar comissões sobre as apostas realizadas pelas pessoas que se cadastrarem através dele.</p>
+        </div>
+        <div class="content-section">
+            <h2>🚀 Como Funciona o Trabalho?</h2>
+            <p><strong>Cadastro Simples</strong></p>
+            <ul>
+                <li>Você se cadastra gratuitamente como promotor na plataforma JB.</li>
+                <li>Após o cadastro, recebe um link exclusivo de promotor.</li>
+            </ul>
+            <p><strong>Divulgação do Link</strong></p>
+            <ul>
+                <li>Você escolhe como divulgar: redes sociais, grupos no WhatsApp, com amigos, estratégias de tráfego pago, etc.</li>
+                <li>Não há limites: quanto mais você divulgar, maior seu potencial de ganhos.</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h2>Comissões em Tempo Real</h2>
+            <ul>
+                <li>Sempre que alguém apostar pelo seu link, você recebe uma comissão automaticamente.</li>
+                <li>O dinheiro entra direto no app e pode ser sacado a qualquer momento, sem burocracia.</li>
+            </ul>
+            <p><strong>Comissão por Fase</strong></p>
+            <ul>
+                <li>Início: comissão de 7% sobre todas as apostas vinculadas a você.</li>
+                <li>Após o período probatório: sua comissão sobe para 10%, aumentando significativamente seus ganhos.</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h2>💰 Potencial de Ganhos Reais</h2>
+            <p><strong>Promotores Iniciantes / Amadores:</strong></p>
+            <ul>
+                <li>Ganhos entre R$ 3.000 a R$ 5.000 por mês, apenas com divulgação orgânica e básica.</li>
+            </ul>
+            <p><strong>Promotores Profissionais:</strong></p>
+            <ul>
+                <li>Com mais experiência e técnicas avançadas, podem atingir R$ 15.000 a R$ 50.000 por mês.</li>
+            </ul>
+            <p><strong>Promotores de Elite:</strong></p>
+            <ul class="checkmark-fire">
+                <li>Os mais estratégicos chegam a faturar entre R$ 150.000 e R$ 200.000 por mês.</li>
+            </ul>
+            <p><strong>📌 Tudo depende do seu esforço, dedicação e criatividade nas estratégias de divulgação.</strong></p>
+        </div>
+        <div class="content-section">
+            <h2>🎯 Suporte e Aprendizado</h2>
+            <p>Ao se tornar promotor, você entra para um grupo exclusivo de suporte, onde terá:</p>
+            <ul>
+                <li>Treinamentos práticos e teóricos.</li>
+                <li>Métodos validados de como atrair apostadores.</li>
+                <li>Dicas de marketing digital, tráfego pago, copywriting e mais.</li>
+                <li>Atualizações constantes sobre estratégias de alta conversão.</li>
+            </ul>
+            <p>Você nunca estará sozinho. Vamos te ajudar a crescer!</p>
+        </div>
+        <div class="content-section">
+            <h2>🎲 Sobre a Banca JB – A Melhor do Mercado</h2>
+            <p>Trabalhando como promotor da JB, você representa uma banca com grandes diferenciais:</p>
+            <p><strong>Cotações Altas e Atrativas:</strong></p>
+            <ul>
+                <li>R$ 1 na milhar: ganha R$ 8.000</li>
+                <li>R$ 1 na centena: ganha R$ 800</li>
+                <li>R$ 1 na dezena: ganha R$ 80</li>
+                <li>R$ 1 no grupo: ganha R$ 20</li>
+            </ul>
+            <p><strong>Bônus Diários de Recarga:</strong></p>
+            <ul>
+                <li>De 15% a 30% em todas as recargas feitas pelos jogadores.</li>
+            </ul>
+            <p>Sistema estável, transparente e fácil de usar – o que gera mais confiança para os apostadores.</p>
+            <p>Isso tudo torna a divulgação mais fácil, pois você estará oferecendo a melhor opção de apostas do mercado.</p>
+        </div>
+        <div class="content-section">
+            <h2>🎯 Vantagens de Ser um Promotor JB</h2>
+            <ul>
+                <li>Trabalho 100% online</li>
+                <li>Horário livre – você faz sua agenda</li>
+                <li>Comissões automáticas e saques instantâneos</li>
+                <li>Sem metas obrigatórias ou cobrança de resultados</li>
+                <li>Potencial de ganhos ilimitado</li>
+                <li>Treinamentos e suporte diário</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h2>📈 Conclusão: Uma Oportunidade de Crescimento Rápido e Real</h2>
+            <p>O programa de promotores JB é ideal para quem busca:</p>
+            <ul>
+                <li>Uma renda extra ou principal</li>
+                <li>Trabalhar com liberdade e autonomia</li>
+                <li>Ter ganhos reais com meritocracia</li>
+                <li>Crescer dentro de um sistema que recompensa quem se destaca</li>
+            </ul>
+            <p>Não importa se você está começando ou já tem experiência com vendas e marketing: o espaço é seu, os resultados vêm com a prática.</p>
+        </div>
+        <div class="content-section">
+            <h2>🚪 Comece AGORA</h2>
+            <p><strong>🔗 Faça seu cadastro agora, receba seu link de promotor e venha crescer com a gente!</strong></p>
+            <p><strong>📲 Em poucos minutos, você pode estar divulgando, ganhando e fazendo parte do nosso time de sucesso!</strong></p>
+            <button class="promotor-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Quero%20me%20tornar%20um%20promotor'">Torne-se um Promotor</button>
+        </div>
+    </div>
     <footer>
         <p>© 2025 Dama da Sorte. Todos os direitos reservados.</p>
     </footer>
+    <script>
+        // Intersection Observer to handle fade-in and fade-out animations
+        const sections = document.querySelectorAll('.content-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.3, // Trigger when 30% of the section is visible
+            rootMargin: '0px 0px -20% 0px' // Adjust to control when fade-out occurs
+        });
+        sections.forEach(section => observer.observe(section));
+    </script>
 </body>
 </html>
