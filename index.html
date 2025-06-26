@@ -80,6 +80,38 @@
             width: clamp(16px, 4vw, 20px);
             height: clamp(16px, 4vw, 20px);
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f4f4f4;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .dropdown-content a {
+            color: #34495e;
+            padding: 0.8rem 1rem;
+            text-decoration: none;
+            display: block;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            text-align: center;
+        }
+        .dropdown-content a:hover {
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
         footer {
             text-align: center;
             padding: 1rem;
@@ -99,6 +131,11 @@
             .buttons button {
                 max-width: 80%;
                 width: 100%;
+            }
+            .dropdown-content {
+                width: 80%;
+                left: 50%;
+                transform: translateX(-50%);
             }
             header {
                 padding: 1.5rem;
@@ -125,6 +162,9 @@
             .description {
                 font-size: clamp(0.7rem, 2.5vw, 0.9rem);
             }
+            .dropdown-content {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -139,7 +179,15 @@
         </p>
     </div>
     <div class="buttons">
-        <button onclick="window.location.href='https://www.zoogames.com.br/'">Apostas Online</button>
+        <div class="dropdown">
+            <button>Bancas Confiáveis</button>
+            <div class="dropdown-content">
+                <a href="https://www.aguiaoficialbet.com/">Águia Oficial</a>
+                <a href="https://app.tigersclub.vip/pr/5iTztjNb">Tiger Club</a>
+                <a href="https://app.goldenloterias.com/pr/d0qiuZKm">Golden Loterias</a>
+                <a href="https://app.bancabrasileira.com.br/pr/cgapOeqn">Banca Brasileira</a>
+            </div>
+        </div>
         <button onclick="window.location.href='https://app.aguiaoficial.com/pr/sAeBgEfV'">Cassino</button>
         <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Quero%20me%20tornar%20um%20promotor'">Torne-se um Promotor</button>
         <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Preciso%20de%20suporte'">
