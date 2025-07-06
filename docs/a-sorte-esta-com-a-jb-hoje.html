@@ -1,0 +1,483 @@
+
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+<link rel="canonical" href="https://www.damadasorte.com.br/" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dama da Sorte - Apostas, Jogo do Bicho e Cassino</title>
+    <meta name="description" content="Dama da Sorte oferece os melhores palpites para apostas online, jogo do bicho e cassino com suporte exclusivo e parcerias confi?veis. Junte-se agora!">
+    <meta name="keywords" content="Dama da Sorte, apostas online, jogo do bicho, cassino, bancas confi?veis, ?guia Oficial, Tiger Club, Golden Loterias, Banca Brasileira, promotor JB">
+    <meta name="author" content="Dama da Sorte">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Dama da Sorte - Apostas e Cassino">
+    <meta property="og:description" content="Descubra os melhores palpites para apostas, jogo do bicho e cassino com a Dama da Sorte. Suporte exclusivo e bancas confi?veis!">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://www.damadasorte.com">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Google Fonts for Roboto Slab -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(to right, #3498db, #c71585, #000000);
+            color: white;
+            width: 100%;
+        }
+        header h1 {
+            font-size: clamp(2rem, 6vw, 3rem);
+        }
+        .logo {
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 0;
+        }
+        .logo img {
+            max-width: min(200px, 50vw);
+            height: auto;
+            margin-bottom: 2rem;
+        }
+        .description {
+            text-align: justify;
+            padding: 0 1.5rem;
+            margin-bottom: 1rem;
+            font-size: clamp(1rem, 3.2vw, 1.2rem);
+            color: #34495e;
+            max-width: 800px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            width: 100%;
+            background-color: #f4f4f4;
+        }
+        .buttons button, .dropdown button {
+            padding: 1rem 2rem;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 350px;
+            justify-content: center;
+            text-align: center;
+        }
+        .buttons button:hover, .dropdown button:hover {
+            background-color: #2980b9;
+        }
+        .dropdown {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+        }
+        .dropdown button {
+            background: linear-gradient(45deg, #9400d3, #4b0082, #00ff00, #ff00ff, #9400d3);
+            background-size: 300%;
+            animation: gemstone 5s linear infinite;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown button:hover {
+            background-position: 100%;
+        }
+        @keyframes gemstone {
+            0% { background-position: 0%; }
+            100% { background-position: 300%; }
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f4f4f4;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border-radius: 5px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .dropdown-content a {
+            color: #34495e;
+            padding: 0.8rem 1rem;
+            text-decoration: none;
+            display: block;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            text-align: center;
+        }
+        .dropdown-content a:hover {
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .whatsapp-icon {
+            width: clamp(18px, 4vw, 22px);
+            height: clamp(18px, 4vw, 22px);
+        }
+        .promotor-info {
+            text-align: center;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            width: 100%;
+        }
+        .promotor-info p {
+            font-family: 'Roboto Slab', serif;
+            font-size: clamp(1rem, 3.2vw, 1.3rem); /* Slightly larger font */
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .arrow-down {
+            display: inline-block;
+            font-size: clamp(2rem, 5vw, 2.5rem); /* Larger, more robust arrow */
+            color: #3498db;
+            font-weight: bold;
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .content {
+            max-width: 800px;
+            width: 100%;
+            padding: 0 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .content-section {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .content-section:not(.visible) {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .content-section h2 {
+            font-size: clamp(1.5rem, 4vw, 1.8rem);
+            color: #3498db;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .content-section p, .content-section li {
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .content-section ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+        .content-section ul li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .content-section ul li::before {
+            content: '?';
+            position: absolute;
+            left: 0;
+        }
+        .content-section ul li.checkmark-fire::before {
+            content: '?';
+        }
+        .content-section ul li.checkmark-rocket::before {
+            content: '?';
+        }
+        .content-section .promotor-button {
+            padding: 1rem 2rem;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 350px;
+            justify-content: center;
+            text-align: center;
+            margin: 1rem auto 0;
+        }
+        .content-section .promotor-button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(to right, #3498db, #c71585, #000000);
+            color: white;
+            width: 100%;
+        }
+        footer p {
+            font-size: clamp(0.8rem, 2.5vw, 1rem);
+        }
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .buttons button, .dropdown, .content-section .promotor-button {
+                max-width: 90%;
+            }
+            .dropdown-content {
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            header {
+                padding: 1.5rem;
+            }
+            .logo {
+                margin: 1.5rem 0;
+            }
+            .description {
+                padding: 0 1rem;
+                font-size: clamp(0.9rem, 2.8vw, 1.1rem);
+            }
+            .content {
+                padding: 0 1rem;
+            }
+            .promotor-info p {
+                font-size: clamp(0.9rem, 3vw, 1.1rem);
+            }
+            .arrow-down {
+                font-size: clamp(1.8rem, 4.5vw, 2.2rem);
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+            .buttons button, .dropdown, .content-section .promotor-button {
+                padding: 0.8rem 1.5rem;
+                font-size: clamp(0.9rem, 3vw, 1rem);
+                max-width: 95%;
+            }
+            .logo img {
+                max-width: min(150px, 60vw);
+            }
+            .description {
+                font-size: clamp(0.8rem, 2.5vw, 1rem);
+            }
+            .content-section h2 {
+                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+            }
+            .dropdown-content {
+                width: 100%;
+            }
+            .promotor-info p {
+                font-size: clamp(0.8rem, 2.8vw, 1rem);
+            }
+            .arrow-down {
+                font-size: clamp(1.5rem, 4vw, 2rem);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dama da Sorte</h1>
+    </header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo Dama da Sorte - Apostas e Cassino">
+        <p class="description">
+            Oi, sou a Dama da Sorte! Trabalho com palpites em apostas, jogo do bicho e cassino. Tenho um grupo exclusivo com suporte, parceria com bancas confi?veis e uma equipe pronta pra te ajudar a ganhar mais. Vem com a gente e jogue com seguran?a!
+        </p>
+    </div>
+    <div class="buttons">
+        <div class="dropdown">
+            <button>Bancas Confi?veis</button>
+            <div class="dropdown-content">
+                <a href="https://www.aguiaoficialbet.com/">?guia Oficial</a>
+                <a href="https://app.tigersclub.vip/pr/5iTztjNb">Tiger Club</a>
+                <a href="https://app.goldenloterias.com/pr/d0qiuZKm">Golden Loterias</a>
+                <a href="https://app.bancabrasileira.com.br/pr/cgapOeqn">Banca Brasileira</a>
+            </div>
+        </div>
+        <button onclick="window.location.href='https://app.aguiaoficial.com/pr/sAeBgEfV'">Cassino</button>
+        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Preciso%20de%20suporte'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" title="?cone do WhatsApp para suporte" class="whatsapp-icon">
+            Suporte
+        </button>
+        <div class="promotor-info">
+            <p><span class="arrow-down">?</span> Seja tamb?m um promotor! <span class="arrow-down">?</span></p>
+            <p><span class="arrow-down">?</span> Mais informa??es abaixo <span class="arrow-down">?</span></p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-section">
+            <h2>Seja um Promotor de vendas JB ? Ganhos Reais com Liberdade Total</h2>
+            <p><strong>? O que ? ser um Promotor JB?</strong></p>
+            <p>Ser Promotor JB ? uma oportunidade real de renda com total liberdade e potencial de ganhos escal?veis. O trabalho ? feito de forma independente, utilizando uma plataforma de apostas online confi?vel e em crescimento. Como promotor, voc? ser? respons?vel por divulgar seu link exclusivo de afiliado e ganhar comiss?es sobre as apostas realizadas pelas pessoas que se cadastrarem atrav?s dele.</p>
+        </div>
+        <div class="content-section">
+            <h2>? Como Funciona o Trabalho?</h2>
+            <p><strong>Cadastro Simples</strong></p>
+            <ul>
+                <li>Voc? se cadastra gratuitamente como promotor na plataforma JB.</li>
+                <li>Ap?s o cadastro, recebe um link exclusivo de promotor.</li>
+            </ul>
+            <p><strong>Divulga??o do Link</strong></p>
+            <ul>
+                <li>Voc? escolhe como divulgar: redes sociais, grupos no WhatsApp, com amigos, estrat?gias de tr?fego pago, etc.</li>
+                <li>N?o h? limites: quanto mais voc? divulgar, maior seu potencial de ganhos.</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h2>Comiss?es em Tempo Real</h2>
+            <ul>
+                <li>Sempre que algu?m apostar pelo seu link, voc? recebe uma comiss?o automaticamente.</li>
+                <li>O dinheiro entra direto no app e pode ser sacado a qualquer momento, sem burocracia.</li>
+            </ul>
+            <p><strong>Comiss?o por Fase</strong></p>
+            <ul>
+                <li>In?cio: comiss?o de 7% sobre todas as apostas vinculadas a voc?.</li>
+                <li>Ap?s o per?odo probat?rio: sua comiss?o sobe para 10%, aumentando significativamente seus ganhos.</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h2>? Potencial de Ganhos Reais</h2>
+            <p><strong>Promotores Iniciantes / Amadores:</strong></p>
+            <ul>
+                <li>Ganhos entre R$ 3.000 a R$ 5.000 por m?s, apenas com divulga??o org?nica e b?sica.</li>
+            </ul>
+            <p><strong>Promotores Profissionais:</strong></p>
+            <ul>
+                <li>Com mais experi?ncia e t?cnicas avan?adas, podem atingir R$ 15.000 a R$ 50.000 por m?s.</li>
+            </ul>
+            <p><strong>Promotores de Elite:</strong></p>
+            <ul class="checkmark-fire">
+                <li>Os mais estrat?gicos chegam a faturar entre R$ 150.000 e R$ 200.000 por m?s.</li>
+            </ul>
+            <p><strong>? Tudo depende do seu esfor?o, dedica??o e criatividade nas estrat?gias de divulga??o.</strong></p>
+        </div>
+        <div class="content-section">
+            <h2>? Suporte e Aprendizado</h2>
+            <p>Ao se tornar promotor, voc? entra para um grupo exclusivo de suporte, onde ter?:</p>
+            <ul>
+                <li>Treinamentos pr?ticos e te?ricos.</li>
+                <li>M?todos validados de como atrair apostadores.</li>
+                <li>Dicas de marketing digital, tr?fego pago, copywriting e mais.</li>
+                <li>Atualiza??es constantes sobre estrat?gias de alta convers?o.</li>
+            </ul>
+            <p>Voc? nunca estar? sozinho. Vamos te ajudar a crescer!</p>
+        </div>
+        <div class="content-section">
+            <h2>? Sobre a Banca JB ? A Melhor do Mercado</h2>
+            <p>Trabalhando como promotor da JB, voc? representa uma banca com grandes diferenciais:</p>
+            <p><strong>Cota??es Altas e Atrativas:</strong></p>
+            <ul>
+                <li>R$ 1 na milhar: ganha R$ 8.000</li>
+                <li>R$ 1 na centena: ganha R$ 800</li>
+                <li>R$ 1 na dezena: ganha R$ 80</li>
+                <li>R$ 1 no grupo: ganha R$ 20</li>
+            </ul>
+            <p><strong>B?nus Di?rios de Recarga:</strong></p>
+            <ul>
+                <li>De 15% a 30% em todas as recargas feitas pelos jogadores.</li>
+            </ul>
+            <p>Sistema est?vel, transparente e f?cil de usar ? o que gera mais confian?a para os apostadores.</p>
+            <p>Isso tudo torna a divulga??o mais f?cil, pois voc? estar? oferecendo a melhor op??o de apostas do mercado.</p>
+        </div>
+        <div class="content-section">
+            <h2>? Vantagens de Ser um Promotor JB</h2>
+            <ul>
+                <li>Trabalho 100% online</li>
+                <li>Hor?rio livre ? voc? faz sua agenda</li>
+                <li>Comiss?es autom?ticas e saques instant?neos</li>
+                <li>Sem metas obrigat?rias ou cobran?a de resultados</li>
+                <li>Potencial de ganhos ilimitado</li>
+                <li>Treinamentos e suporte di?rio</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h2>? Conclus?o: Uma Oportunidade de Crescimento R?pido e Real</h2>
+            <p>O programa de promotores JB ? ideal para quem busca:</p>
+            <ul>
+                <li>Uma renda extra ou principal</li>
+                <li>Trabalhar com liberdade e autonomia</li>
+                <li>Ter ganhos reais com meritocracia</li>
+                <li>Crescer dentro de um sistema que recompensa quem se destaca</li>
+            </ul>
+            <p>N?o importa se voc? est? come?ando ou j? tem experi?ncia com vendas e marketing: o espa?o ? seu, os resultados v?m com a pr?tica.</p>
+        </div>
+        <div class="content-section">
+            <h2>? Comece AGORA</h2>
+            <p><strong>? Fa?a seu cadastro agora, receba seu link de promotor e venha crescer com a gente!</strong></p>
+            <p><strong>? Em poucos minutos, voc? pode estar divulgando, ganhando e fazendo parte do nosso time de sucesso!</strong></p>
+            <button class="promotor-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=5583999719353&text=Quero%20me%20tornar%20um%20promotor'">Torne-se um Promotor</button>
+        </div>
+    </div>
+    <footer>
+        <p>? 2025 Dama da Sorte. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Intersection Observer to handle fade-in and fade-out animations
+        const sections = document.querySelectorAll('.content-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.3, // Trigger when 30% of the section is visible
+            rootMargin: '0px 0px -20% 0px' // Adjust to control when fade-out occurs
+        });
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
